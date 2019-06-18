@@ -1,9 +1,8 @@
 # TO-DO: Complete the selection_sort() function below 
 
-m = [1, 2, 5, 8, 10, 13, 15, 4, 19, 7, 20]
+m = [5, 15, 3, 12, 17, 0]
 
 def selection_sort( arr ):
-    
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         cur_index = i
@@ -25,19 +24,37 @@ def selection_sort( arr ):
                 # set the element in the smallest_index to the element that's in the current index
                 arr[smallest_index] = arr[cur_index]
 
+                # set the element at the current index to the temporary var,
+                # this is the smallest element
+                arr[cur_index] = temp
+
         # TO-DO: swap
         arr[cur_index] = smallest_index
 
-     return arr
+    return arr
 
 print(selection_sort(m))    
 
 
 # TO-DO:  implement the Bubble Sort function below
+
+n = [1, 7, 9, 19, 16, 5, 2]
 def bubble_sort( arr ):
+    current_index = 0
+
+    for i in range(0, len(arr) - 1):
+
+        while arr[0]
+        if arr[current_index] > arr[current_index + 1]:
+            # Swap
+            temp = arr[current_index]
+            arr[current_index] = arr[current_index + 1]
+            arr[current_index + 1] = temp
+
+        current_index += 1
 
     return arr
-
+print(bubble_sort(n))
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
